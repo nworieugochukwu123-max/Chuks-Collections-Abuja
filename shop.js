@@ -52,7 +52,12 @@ function renderCart() {
       </div>
       <button class="remove" type="button" data-rm="${r.id}" aria-label="Remove ${r.p.name} from cart">Remove</button>
     </li>`).join('');
-  const lines = rows.map((r) => `- ${r.qty} x ${r.p.name} (${money(r.p.price * r.qty)})`).join('\n');
+  const photo = (p) => {
+    const u = new URL(p.img, location.href);
+    if (u.hostname === 'images.unsplash.com') u.search = '?w=800&q=80';
+    return u.href;
+  };
+  const lines = rows.map((r) => `- ${r.qty} x ${r.p.name} (${money(r.p.price * r.qty)})\n  Photo: ${photo(r.p)}`).join('\n');
   const msg = `Hello Chuks Collections, I would like to order:\n${lines}\nTotal: ${money(total)}`;
   $('#checkout').href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
   try { localStorage.setItem('cc-cart', JSON.stringify(cart)); } catch (e) { /* storage unavailable */ }
