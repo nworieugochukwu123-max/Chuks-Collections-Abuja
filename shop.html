@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop | Chuks Collections</title>
+<meta name="description" content="Shop shoes, suits and everyday menswear from Chuks Collections, Abuja. Add pieces to your cart and send your order on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Newsreader:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Chuks <b>Collections</b></a>
+    <button class="btn alt menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="story.html">Our story</a>
+      <a href="index.html#visit">Visit us</a>
+    </nav>
+    <button class="btn red cart-btn" id="open-cart" type="button">Cart <span id="count">0</span></button>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="shop-top">
+    <h1>The shop</h1>
+    <p>Shoes, suits and everyday pieces. Add what you like to your cart and send the order to us on WhatsApp.</p>
+  </div>
+  <div class="toolbar">
+    <div class="chips" role="group" aria-label="Filter by category">
+      <button class="chip" type="button" data-f="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-f="shoes" aria-pressed="false">Shoes</button>
+      <button class="chip" type="button" data-f="clothing" aria-pressed="false">Clothing</button>
+      <button class="chip" type="button" data-f="accessories" aria-pressed="false">Accessories</button>
+    </div>
+    <label class="sort-label">Sort by
+      <select class="sort" id="sort">
+        <option value="featured">Featured</option>
+        <option value="low">Price: low to high</option>
+        <option value="high">Price: high to low</option>
+      </select>
+    </label>
+  </div>
+  <div class="pgrid" id="products"></div>
+</main>
+
+<div class="scrim" id="scrim"></div>
+<aside class="cart" id="cart" role="dialog" aria-modal="true" aria-label="Your cart">
+  <div class="cart-head">
+    <h2>Your cart</h2>
+    <button class="btn alt close-btn" id="close-cart" type="button">Close</button>
+  </div>
+  <p class="cart-empty" id="cart-empty">Your cart is empty. Add a piece from the shop.</p>
+  <ul class="cart-items" id="cart-items"></ul>
+  <div class="cart-foot" id="cart-foot" hidden>
+    <p class="total"><span>Total</span><strong id="total"></strong></p>
+    <a class="btn red" id="checkout" href="#" target="_blank" rel="noopener noreferrer">Send order on WhatsApp</a>
+    <p class="cart-note">Your order opens in WhatsApp so we can confirm it with you.</p>
+  </div>
+</aside>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="index.html">Chuks <b>Collections</b></a>
+      <p>Men’s shoes and menswear, Abuja.</p>
+    </div>
+    <div>
+      <p><a href="tel:08037880175">0803 788 0175</a> / <a href="tel:08039575154">0803 957 5154</a></p>
+      <p><a href="mailto:chukskingsley2021@gmail.com">chukskingsley2021@gmail.com</a></p>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+<script src="shop.js"></script>
+</body>
+</html>

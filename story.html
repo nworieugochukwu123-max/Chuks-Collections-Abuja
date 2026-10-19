@@ -1,94 +1,74 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Story | Chuks Collections</title>
-    <meta
-      name="description"
-      content="The story of Chuks Collections, from Wuse to Kubwa, Abuja."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="story-page">
-    <header class="story-header">
-      <a class="brand" href="index.html" aria-label="Chuks Collections home"
-        ><span class="brand-mark">C</span
-        ><span>CHUKS<br /><b>COLLECTIONS</b></span></a
-      >
-      <a class="story-back" href="index.html"><span>←</span> Back to home</a>
-    </header>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our story | Chuks Collections</title>
+<meta name="description" content="The story of Chuks Collections, from Wuse to Kubwa, Abuja.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Newsreader:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Chuks <b>Collections</b></a>
+    <button class="btn alt menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="shop.html">Shop</a>
+      <a href="story.html">Our story</a>
+      <a href="index.html#visit">Visit us</a>
+      <a class="btn red" href="index.html#order">Order now</a>
+    </nav>
+  </div>
+</header>
 
-    <main>
-      <section class="story-hero">
-        <div class="story-hero-copy">
-          <p class="section-kicker">Chuks Collections</p>
-          <h1>Our<br /><em>Story.</em></h1>
-          <p class="story-location">
-            Wuse &amp; Kubwa, Abuja <span>•</span> Est. 2000
-          </p>
-        </div>
-        <div class="story-hero-image">
-          <img
-            src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1400&q=90"
-            alt="Carefully arranged menswear in a boutique"
-          />
-          <span class="story-image-label mono">ARCHIVE / 001</span>
-        </div>
-      </section>
+<main>
+  <section class="story-hero">
+    <div class="wrap">
+      <div>
+        <h1>Our story</h1>
+        <p class="lead">Wuse and Kubwa, Abuja. Open since 2000.</p>
+      </div>
+      <div class="stitched">
+        <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1200&q=85" alt="Carefully arranged menswear in a boutique">
+      </div>
+    </div>
+  </section>
 
-      <section class="story-content">
-        <p class="section-kicker">The beginning</p>
-        <div class="story-copy">
-          <p class="story-lead">
-            In 2000, Mr. Nworie Chukwuma Kingsley opened the doors of Chuks
-            Collections in Wuse, Abuja — with a simple vision: to give men a
-            place to dress with distinction.
-          </p>
-          <p>
-            What began as one boutique built a reputation on something rare —
-            shoes made and chosen with real craftsmanship, the kind that changes
-            how a man carries himself.
-          </p>
-          <p>
-            That reputation grew. In 2014, Chuks Collections expanded to Kubwa,
-            Abuja, bringing the same standard of quality to a new generation of
-            clients across the city.
-          </p>
-          <p>
-            Today, with two locations and over two decades of experience, Chuks
-            Collections remains true to where it started — a boutique for the
-            man who knows that the right pair of shoes isn’t just footwear. It’s
-            a foundation.
-          </p>
-          <button class="button button-outline story-download" type="button" onclick="window.print()">
-            Download story as PDF <span>↓</span>
-          </button>
-        </div>
-      </section>
+  <article class="story">
+    <ol class="timeline">
+      <li>
+        <span class="year">2000</span>
+        <p>In 2000, Mr. Nworie Chukwuma Kingsley opened the doors of Chuks Collections in Wuse, Abuja, with a simple vision: to give men a place to dress with distinction.</p>
+        <p>What began as one boutique built a reputation on something rare: shoes made and chosen with real craftsmanship, the kind that changes how a man carries himself.</p>
+      </li>
+      <li>
+        <span class="year">2014</span>
+        <p>That reputation grew. In 2014, Chuks Collections expanded to Kubwa, Abuja, bringing the same standard of quality to a new generation of clients across the city.</p>
+      </li>
+      <li>
+        <span class="year">Today</span>
+        <p>Today, with two locations and over two decades of experience, Chuks Collections remains true to where it started: a boutique for the man who knows that the right pair of shoes isn’t just footwear. It’s a foundation.</p>
+      </li>
+    </ol>
+    <div class="actions no-print">
+      <button class="btn alt" type="button" onclick="window.print()">Download story as PDF</button>
+      <a class="btn red" href="shop.html">Shop the collection</a>
+    </div>
+  </article>
+</main>
 
-      <section class="story-signoff">
-        <div class="story-signoff-mark">C</div>
-        <p>
-          Chuks Collections <span>•</span> Wuse, Abuja <span>•</span> Kubwa,
-          Abuja
-        </p>
-      </section>
-    </main>
-
-    <footer class="story-footer">
-      <a class="brand" href="index.html"
-        ><span class="brand-mark">C</span
-        ><span>CHUKS<br /><b>COLLECTIONS</b></span></a
-      >
-      <p>Menswear with a point of view.</p>
-      <a href="index.html">Return to the collection <span>↗</span></a>
-    </footer>
-  </body>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="index.html">Chuks <b>Collections</b></a>
+      <p>Men’s shoes and menswear, Abuja.</p>
+    </div>
+    <a href="index.html">Back to the collection</a>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
 </html>
