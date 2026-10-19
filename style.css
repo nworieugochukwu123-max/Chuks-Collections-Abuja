@@ -200,3 +200,24 @@ h3{font-size:1.2rem;font-weight:700;line-height:1.2}
   .pimg img,.scroll-reveal{transition:none}
   .scroll-reveal{opacity:1;transform:none}
 }
+
+.page-loader{display:none;position:fixed;inset:0;z-index:1000;place-items:center;overflow:hidden;padding:1.5rem;background:var(--tissue);color:var(--ink);transition:opacity .55s ease,visibility .55s ease}
+html.is-loading body>:not(.page-loader){visibility:hidden}
+html.is-loading .page-loader{display:grid}
+.page-loader::before,.page-loader::after{position:absolute;content:"";width:min(72vw,34rem);aspect-ratio:1;border:1px dashed rgba(156,113,66,.24);border-radius:50%;pointer-events:none}
+.page-loader::after{width:min(52vw,24rem);border-style:solid;opacity:.55}
+.loader-content{position:relative;z-index:1;display:flex;width:min(100%,22rem);flex-direction:column;align-items:center;text-align:center}
+.loader-brand{font:800 1.35rem/1.2 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.03em}
+.loader-brand b{color:var(--ox)}
+.loader-emblem{position:relative;display:grid;width:5.5rem;aspect-ratio:1;place-items:center;margin:2rem 0 1.5rem;border:1px dashed var(--kraft-d);border-radius:50%;color:var(--ox);font:800 1.35rem "Bricolage Grotesque",system-ui,sans-serif}
+.loader-emblem::before{position:absolute;inset:.45rem;border:1px solid var(--kraft);border-radius:50%;content:"";animation:loader-spin 8s linear infinite}
+.loader-emblem::after{position:absolute;top:-.2rem;left:50%;width:.5rem;aspect-ratio:1;border-radius:50%;background:var(--ox);content:""}
+.loader-caption,.loader-note{font:700 .68rem/1.4 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:.15em}
+.loader-caption{color:var(--kraft-d)}
+.loader-count{margin:.25rem 0 .75rem;color:var(--ox);font:800 clamp(4.5rem,16vw,7rem)/1 "Bricolage Grotesque",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:-.08em}
+.loader-progress{width:min(100%,16rem);height:3px;overflow:hidden;background:rgba(156,113,66,.2)}
+.loader-progress span{display:block;width:100%;height:100%;background:var(--ox);transform:scaleX(.01);transform-origin:left center;transition:transform .08s linear}
+.loader-note{margin-top:1.1rem;color:var(--kraft-d);font-size:.58rem}
+.page-loader.is-done{display:grid;visibility:hidden;opacity:0;pointer-events:none}
+@keyframes loader-spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.page-loader,.loader-progress span{transition:none}.loader-emblem::before{animation:none}}
